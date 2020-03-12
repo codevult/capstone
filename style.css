@@ -199,63 +199,72 @@ p {
 }
 
 .start {
+  display: flex;
+  flex-direction: column;
   width: 40%;
   color: rgba(0, 0, 0, 0.70);
 }
 
 .start h1,
 .start h3,
-.start button,
-.start button a {
+.start a {
   width: 70%;
   margin: 1em 0 0 0;
   transform: translate(10%, 0%);
 }
 
 @media only screen and (min-width: 1200px) {
-/*
-  .start h1 {
-font-size: 2em;
-  }
-.start h3 {
-font-size: 2em;
-}
-.start button {
-font-size: 2em;
-}
-.start button a {
-font-size: 2em;
-}
-*/
+
   .start {
     padding-top: 5em;
   }
 
   .start h1,
   .start h3,
-  .start button,
-  .start button a {
-    margin: 2em 0 0 0;
-
+  .start a {
+    margin: 0;
+    padding: 0;
   }
 
+  .start h1 {
+    font-size: 4em;
+    line-height: 0.9em;
+  }
+
+  .start h3 {
+    margin-top: 2em;
+  }
+
+  .start a {
+    font-size: 1.5em;
+  }
+
+ .header .logo img {
+   height: 55px;
+ }
+
+
+.header .logo p{
+  font-size: 2em;
 }
 
-.start button {
-  background-color: rgba(0, 0, 0, 0.70);
-  border: 0px;
+
+.start a {
+  width: 60%;
+  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 0.5em;
-}
-
-.start button a {
-  font-size: 1.2em;
-  font-weight: 100;
-  width: 100%;
   color: white;
+  background-color: rgba(0, 0, 0, 0.70);
+  text-align: center;
   text-decoration: none;
 }
 
-
+.header li a {
+  height: 44.067px;
+  font-size: 1.2em;
+  padding-top: 2em;
+}
 
 
 /*Section Two*/
@@ -537,23 +546,80 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 400px;
-    max-height: 500px;
+    min-height: auto;
+    max-height: auto;
     font-size: calc(16px + 1vw);
     line-height: calc(1.2em + 1vw);
-
+    transform: none;
 }
 
   .start h1,
   .start h3,
   .start button {
+    height: auto;
     transform: none;
   }
 
-  .start button {
-    width: 250px;
+  #button {
+    width: 100%;
   }
 
+  .start a{
+    width: 60%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    text-decoration: none;
+  }
+
+
+/*
+  .start {
+    width: 40%;
+    color: rgba(0, 0, 0, 0.70);
+  }
+  
+  .start h1,
+  .start h3,
+  .start button,
+  .start button a {
+    width: 70%;
+    margin: 1em 0 0 0;
+    transform: translate(10%, 0%);
+  }
+
+    .start {
+    padding-top: 5em;
+  }
+
+  .start h1,
+  .start h3,
+  .start button,
+  .start button a {
+    margin: 2em 0 0 0;
+
+  }
+
+}
+
+.start button {
+  background-color: rgba(0, 0, 0, 0.70);
+  border: 0px;
+  padding: 0.5em;
+}
+
+.start button a {
+  font-size: 1.2em;
+  font-weight: 100;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+  */
 
   /*Section Two*/
 
