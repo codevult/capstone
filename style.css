@@ -81,6 +81,13 @@ p {
   color: black;
 }
 
+.header .logo img {
+  height: 50px;
+}
+.header .logo p{
+  font-size: 1.6em;
+}
+
 .header .logo:hover {
   opacity: 60%;
   transition: opacity 500ms ease;
@@ -101,6 +108,7 @@ p {
 }
 
 .header .menu-icon {
+  margin-top: 0.7em;
   cursor: pointer;
   float: right;
   padding: 28px 20px;
@@ -110,10 +118,10 @@ p {
 .header .menu-icon .navicon {
   background: #333;
   display: block;
-  height: 2px;
+  height: 4px;
   position: relative;
   transition: background .2s ease-out;
-  width: 18px;
+  width: 40px;
 }
 
 .header .menu-icon .navicon:before,
@@ -128,11 +136,11 @@ p {
 }
 
 .header .menu-icon .navicon:before {
-  top: 5px;
+  top: 10px;
 }
 
 .header .menu-icon .navicon:after {
-  top: -5px;
+  top: -10px;
 }
 .header .menu-btn {
   display: none;
@@ -159,12 +167,14 @@ p {
   top: 0;
 }
 
-@media (min-width: 53em) {
+
+@media (min-width: 62em) {
   .header li {
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    font-size: 1.2em;
+    padding: 30px 30px 10px 30px;
   }
   .header .menu {
     clear: none;
@@ -210,11 +220,21 @@ p {
 .start a {
   width: 70%;
   margin: 1em 0 0 0;
-  transform: translate(10%, 0%);
+}
+
+.start a {
+  width: 60%;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.70);
+  text-align: center;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1200px) {
-
+  
   .start {
     padding-top: 5em;
   }
@@ -266,6 +286,7 @@ p {
   padding-top: 2em;
 }
 
+}
 
 /*Section Two*/
 
@@ -508,7 +529,24 @@ footer {
 }
 
 
+@media only screen and (max-width: 370px) {
+
+  .header .logo p {
+    display: none;
+  }
+
+  .header .logo img {
+    margin-top: 0.9em;
+    margin-left: 0.5em;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
+
+  .header .logo {
+    padding: 0;
+    text-decoration: none;
+  }
 
 
   section h1 {
@@ -555,7 +593,7 @@ footer {
 
   .start h1,
   .start h3,
-  .start button {
+  .start a {
     height: auto;
     transform: none;
   }
@@ -574,52 +612,6 @@ footer {
     text-align: center;
     text-decoration: none;
   }
-
-
-/*
-  .start {
-    width: 40%;
-    color: rgba(0, 0, 0, 0.70);
-  }
-  
-  .start h1,
-  .start h3,
-  .start button,
-  .start button a {
-    width: 70%;
-    margin: 1em 0 0 0;
-    transform: translate(10%, 0%);
-  }
-
-    .start {
-    padding-top: 5em;
-  }
-
-  .start h1,
-  .start h3,
-  .start button,
-  .start button a {
-    margin: 2em 0 0 0;
-
-  }
-
-}
-
-.start button {
-  background-color: rgba(0, 0, 0, 0.70);
-  border: 0px;
-  padding: 0.5em;
-}
-
-.start button a {
-  font-size: 1.2em;
-  font-weight: 100;
-  width: 100%;
-  color: white;
-  text-decoration: none;
-}
-
-  */
 
   /*Section Two*/
 
