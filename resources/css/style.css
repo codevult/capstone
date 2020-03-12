@@ -1,0 +1,468 @@
+/*Universal Styles*/
+html {
+  color: black;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+body {
+  margin: 0 auto;
+}
+
+/*
+section {
+  max-width: 100%;
+  font-size: calc(16px + 0.4vw);
+  line-height: calc(1.2em + 0.5vw);
+}
+*/
+
+
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/*Head*/
+.head {
+  margin: 0 24px 0 24px;
+  height: 64px;
+  display: flex;
+}
+
+.head .logo {
+  flex: auto;
+  padding: 6px;
+}
+
+.head .logo:hover {
+  opacity: 60%;
+  transition: opacity 500ms ease;
+}
+
+.head .logo img,
+.head .logo p{
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+  color: black;
+}
+
+#colmar {
+  font-weight: 600;
+}
+
+#academy {
+  color: gray;
+}
+
+.head .nav {
+  padding: 3px 6px 0 6px;
+}
+
+.head .nav ul li{
+  display: inline-flex;
+  margin-right: 16px;
+}
+
+.head .nav ul li a{
+  font-size: 0.9em;
+  border: 1px solid rgba(0, 0, 0, 0.70);
+  border-radius: 0.2em;
+  padding: 0.15em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.70);
+}
+
+.head .nav ul li a:hover{
+  border: 1px solid rgba(0, 0, 0, 0.70);
+  color: black;
+  background-color: rgb(224, 224, 224);
+  transition: color 700ms ease;
+}
+
+
+/*Section One*/
+
+#secone {
+  display: block;
+  margin: 0 auto ;
+  background-color: lightgray;
+}
+
+.seconewrapper {
+  display: flex;
+}
+
+.banner {
+  width: 60%;
+  height: auto;
+  padding: 32px 24px;
+
+}
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.start {
+  width: 40%;
+  color: rgba(0, 0, 0, 0.70);
+}
+
+.start h1,
+.start h3,
+.start button,
+.start button a {
+  width: 70%;
+  margin: 2.5em 0 0 0;
+  transform: translate(10%, 0%);
+}
+
+.start button {
+  background-color: rgba(0, 0, 0, 0.70);
+  border: 0px;
+  padding: 0.5em;
+}
+
+.start button a {
+  font-size: 1.2em;
+  font-weight: 100;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.slider {
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background-color: rgba(0, 139, 186, 0.486);
+  overflow: hidden;
+  width: 0%;
+  height: 100%;
+  transition: .5s ease-in;
+}
+
+.start button:hover .slider {
+  left: 0;
+  width: 100%;
+}
+
+
+/*Section Two*/
+
+#sectwo {
+  display: block;
+}
+
+.sectwowrapper {
+  display: flex;
+}
+
+.infomain {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+
+.infomain .infoimage img{
+  width: 100%;
+  height: auto;
+}
+
+.infotext {
+  display: inline;
+}
+
+.infotext h2,
+.infotext p {
+  width: 100%;
+  height: auto;
+}
+
+
+.info {
+  display: block;
+  width: 40%;
+}
+
+.inforow {
+  display: flex;
+  padding: 1em 0;
+}
+
+.infoimg {
+  width: 35%;
+  height: auto;
+  padding: 16px;
+}
+
+.infoimg img {
+  width: 100%;
+
+}
+
+.inforowtext {
+  width: 65%;
+  height: auto;
+}
+
+.inforowtext h3,
+.inforowtext p,
+.inforowtext button {
+display: table;
+vertical-align: middle;
+}
+
+.inforowtext h3 {
+  font-size: 1.3em;
+}
+
+.inforowtext p {
+  display: block;
+  font-size: 1.2em;
+}
+
+.inforowtext button {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.70);
+  border: none;
+  padding: 0.7em 0.1em;
+}
+
+.inforowtext button a {
+  text-decoration: none;
+  color: white;
+  padding: 0.6em 0.7em;
+}
+
+.inforowtext button a:hover,
+.inforowtext button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+
+/*Section Three*/
+#secthree {
+  display: block;
+  background-color: lightgray;
+}
+
+.learn h2{
+  text-align: center;
+  font-size: 2em;
+  padding: 32px 0 16px 0;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 56px 32px 56px;
+}
+
+.block {
+  background-color: white;
+  width: 30%;
+  height: auto;
+  margin: 16px;
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+}
+
+.block h3 {
+  padding: 16px 16px 0 16px;
+}
+
+.block p {
+  padding: 8px 16px 24px 16px;
+}
+
+
+/*Section Four*/
+
+#secfour {
+  display: block;
+}
+
+#secfour h2 {
+  text-align: center;
+  padding:  32px 0;
+  margin: 0 auto;
+}
+
+.thesis {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thesisvid {
+  width: 60%;
+  padding: 0 24px 24px 24px;
+}
+
+.thesisvid video {
+  width: 100%;
+}
+
+.thesisvidtext {
+  text-align: left;
+}
+
+.thesisvidtext h2{
+  padding-top: 8px;
+}
+.thesisvidtext p {
+  padding-bottom: 32px;
+}
+
+.thesistext {
+  width: 60%;
+}
+
+.thesiscol {
+  display: table;
+  vertical-align: middle;
+  width: 35%;
+}
+
+.thesisrow {
+  display: flex;
+  padding: 16px;
+}
+
+.thesisimg {
+  width: 35%;
+}
+
+.thesisimg img{
+  width: 100%;
+}
+
+.thesistext {
+  width: 65%;
+  padding-left: 16px;
+}
+
+/*
+.thesistext h3{
+
+}
+
+.thesistext p {
+
+}
+*/
+
+
+/*Footer*/
+
+#footer {
+  background-color: black;
+}
+
+footer {
+  display: flex;
+  padding: 16px 24px;
+}
+
+.copyright {
+  width: 50%;
+}
+
+.copyright p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.termsprivacy {
+  text-align: right;
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+
+  section h1 {
+    font-size: 1.5em;
+  }
+  
+  section h2 {
+    font-size: 1em;
+  }
+  
+  section h3 {
+    font-size: 0.8em;
+  }
+
+  section p {
+    font-size: 0.4em;
+  }
+
+  /*Section One*/
+
+  .seconewrapper {
+    display: block;
+    max-width: 1200px;
+  }
+
+  .banner {
+    display: block;
+    width: 100%;
+  }
+
+  .start {
+    display: block;
+    width: 100%;
+}
+
+  .start h1,
+  .start h3,
+  .start button {
+    width: 100%;
+  }
+
+  /*Section Two*/
+
+
+  .sectwowrapper {
+    display: block;
+  }
+
+  .infomain {
+    display: block;
+    width: 100%;
+  }
+
+  .info {
+    display: block;
+    width: 100%;
+  }
+
+
+}
