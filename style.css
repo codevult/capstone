@@ -21,7 +21,6 @@ section {
 */
 
 
-
 h1 {
   font-size: 2.5em;
 }
@@ -39,28 +38,52 @@ p {
 }
 
 /*Head*/
-.head {
-  margin: 0 24px 0 24px;
-  height: 64px;
-  display: flex;
+
+.header {
+  display: block;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  z-index: 3;
 }
 
-.head .logo {
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  color: black;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
   flex: auto;
   padding: 6px;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.head .logo:hover {
-  opacity: 60%;
-  transition: opacity 500ms ease;
-}
-
-.head .logo img,
-.head .logo p{
+.header .logo img,
+.header .logo p{
   display: inline-block;
   vertical-align: middle;
   font-weight: 500;
   color: black;
+}
+
+.header .logo:hover {
+  opacity: 60%;
+  transition: opacity 500ms ease;
 }
 
 #colmar {
@@ -71,33 +94,87 @@ p {
   color: gray;
 }
 
-.head .nav {
-  padding: 3px 6px 0 6px;
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
-.head .nav ul li{
-  display: inline-flex;
-  margin-right: 16px;
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  user-select: none;
 }
 
-.head .nav ul li a{
-  font-size: 0.9em;
-  border: 1px solid rgba(0, 0, 0, 0.70);
-  border-radius: 0.2em;
-  padding: 0.15em 1em;
-  text-decoration: none;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.70);
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
 }
 
-.head .nav ul li a:hover{
-  border: 1px solid rgba(0, 0, 0, 0.70);
-  color: black;
-  background-color: rgb(224, 224, 224);
-  transition: color 700ms ease;
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
 
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 53em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
 /*Section One*/
 
 #secone {
@@ -131,8 +208,37 @@ p {
 .start button,
 .start button a {
   width: 70%;
-  margin: 2.5em 0 0 0;
+  margin: 1em 0 0 0;
   transform: translate(10%, 0%);
+}
+
+@media only screen and (min-width: 1200px) {
+/*
+  .start h1 {
+font-size: 2em;
+  }
+.start h3 {
+font-size: 2em;
+}
+.start button {
+font-size: 2em;
+}
+.start button a {
+font-size: 2em;
+}
+*/
+  .start {
+    padding-top: 5em;
+  }
+
+  .start h1,
+  .start h3,
+  .start button,
+  .start button a {
+    margin: 2em 0 0 0;
+
+  }
+
 }
 
 .start button {
@@ -219,6 +325,10 @@ p {
 .infoimg img {
   width: 100%;
 
+}
+
+.imgtwo {
+  display: none;
 }
 
 .inforowtext {
@@ -405,7 +515,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
 
 
   section h1 {
@@ -434,29 +544,46 @@ footer {
   .banner {
     display: block;
     width: 100%;
+    padding: 0;
   }
 
   .start {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    font-size: calc(16px + 1vw);
+    line-height: calc(1.2em + 1vw);
+
 }
 
   .start h1,
   .start h3,
   .start button {
-    width: 100%;
+    transform: none;
   }
+
+  .start button {
+    width: 250px;
+  }
+
 
   /*Section Two*/
 
 
   .sectwowrapper {
     display: block;
+    margin: 0;
+    padding: 0;
   }
 
   .infomain {
     display: block;
     width: 100%;
+    padding: 0;
   }
 
   .info {
@@ -464,5 +591,52 @@ footer {
     width: 100%;
   }
 
+  .infoimage img,
+  .infotext{
+    display: none;
+  }
 
+  .imgtwo {
+    display: block;
+    width: 80%;
+  }
+
+  .imgone {
+    display: none;
+  }
+
+  .infoimg {
+    width: 100%;
+    padding: 0;
+  }
+
+  .inforow {
+    display: block;
+    align-items: center;
+    padding: 0;
+  }
+
+  .inforowtext {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+.inforowtext h3,
+.inforowtext p,
+.inforowtext button {
+  text-align: center;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+.inforowtext button {
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+
+
+  
 }

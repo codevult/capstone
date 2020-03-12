@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <link rel="stylesheet" href="style.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>COLMARACADEMY</title>
   </head>
   
   <body>
-      <div class="head">
-          <div class="logo">
-              <a href="#">
+          <header class="header">
+            <a href="/" class="logo">
                 <img src="resources/images/ic-logo.svg" alt="Lion Symbol"><p id="colmar">COLMAR</p><p id="academy">ACADEMY</p>
-              </a>
-          </div>
-          <div class="nav">
-            <ul>
-                <li><a href="#">On Campus</a></li>
-                <li><a href="#">Online</a></li>
-                <li><a href="#">For Companies</a></li>
-                <li><a href="#">Sign In</a></li>
+            </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+              <li><a href="#">On Campus</a></li>
+              <li><a href="#">Online</a></li>
+              <li><a href="#">For Companies</a></li>
+              <li><a href="#">Sign In</a></li>
             </ul>
-          </div>
+          </header>
+
       </div>
 
       <!--Section One-->
@@ -60,7 +61,8 @@
             <div class="info">
                 <div class="inforow">
                     <div class="infoimg">
-                        <img src="resources/images/information-orientation.jpg" alt="Woods">
+                        <img class="imgone" src="resources/images/information-orientation.jpg" alt="Woods">
+                        <img class="imgtwo" src="resources/images/information-orientation-mobile.jpg" alt="Woods">
                     </div>
                     <div class="inforowtext">
                         <h3>Orientation date</h3>
@@ -70,7 +72,8 @@
                 </div>
                 <div class="inforow">
                     <div class="infoimg">
-                    <img src="resources/images/information-campus.jpg" alt="Campus">
+                    <img class="imgone" src="resources/images/information-campus.jpg" alt="Campus">
+                    <img class="imgtwo" src="resources/images/information-campus-mobile.jpg" alt="Campus">
                     </div>
                         <div class="inforowtext">
                         <h3>Our campus</h3>
@@ -80,7 +83,8 @@
                 </div>
                 <div class="inforow">
                     <div class="infoimg">
-                    <img src="resources/images/information-guest-lecture.jpg" alt="Lecturer Oliver Sack">
+                    <img class="imgone" src="resources/images/information-guest-lecture.jpg" alt="Lecturer Oliver Sack">
+                    <img class="imgtwo" src="resources/images/information-guest-lecture-mobile.jpg" alt="Lecturer Oliver Sack">
                     </div>
                     <div class="inforowtext">
                         <h3>Our guest lecture</h3>
