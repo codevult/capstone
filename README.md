@@ -13,7 +13,10 @@ For this project you will implement the site specified by the wireframes and mak
 Good luck!
 
 
-
+Remarks
 This project made me learn that I can and should be using lesser classes for styling the website. 
 Instead of rushing to create section by section, I should always look at the whole page and decide 
-which containers can be reused, and create classes for them.  - RESPONSIVE FOR MOBILE NOT COMPLETE
+which containers can be reused, and create classes for them.
+
+
+***RESPONSIVE FOR MOBILE NOT COMPLETE
