@@ -255,23 +255,7 @@ font-size: 2em;
   text-decoration: none;
 }
 
-.slider {
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  background-color: rgba(0, 139, 186, 0.486);
-  overflow: hidden;
-  width: 0%;
-  height: 100%;
-  transition: .5s ease-in;
-}
 
-.start button:hover .slider {
-  left: 0;
-  width: 100%;
-}
 
 
 /*Section Two*/
@@ -636,7 +620,75 @@ footer {
   margin-bottom: 1em;
 }
 
+/*Section Three*/
 
-
+.container {
+  display: block;
+  flex-wrap: nowrap;
+  padding: 0 0 30px 0;
   
+}
+
+.block img, p {
+  display: none;
+}
+  
+.block {
+  width: 94%;
+}
+
+.block h3 {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+/*Section Four*/
+
+#secfour h2 {
+  font-size: 2em;
+}
+
+.thesisvid {
+  display:block;
+  width: 100%;
+  padding: 0;
+}
+
+.thesisvidtext {
+  display: none;
+}
+
+.thesiscol {
+  display: none;
+}
+
+
+/*Footer*/
+#footer {
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+footer {
+  display: block;
+}
+
+.copyright {
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+.copyright p {
+  display: block;
+  width: 100%;
+}
+
+.termsprivacy {
+  display: none;
+
+}
+
 }
