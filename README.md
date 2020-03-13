@@ -14,9 +14,8 @@ Good luck!
 
 
 Remarks
-This project made me learn that I can and should be using lesser classes for styling the website. 
+This project made me learn that I can and should be using lesser classes and divs for styling the website. 
 Instead of rushing to create section by section, I should always look at the whole page and decide 
 which containers can be reused, and create classes for them.
 
-
-***RESPONSIVE FOR MOBILE NOT COMPLETE
+That's my first home page from scratch!
